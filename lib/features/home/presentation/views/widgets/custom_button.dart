@@ -12,7 +12,7 @@ class CustomButton extends StatelessWidget {
         onPressed: () {},
         style: ElevatedButton.styleFrom(
             shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
             padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 100)),
         child: const Text(
           "Get Started",

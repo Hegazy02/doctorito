@@ -11,7 +11,7 @@ class OnBoardingViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 30.h),
+      padding: EdgeInsets.symmetric(vertical: 30.w),
       child: Column(
         children: [
           const LogoWidget(),
