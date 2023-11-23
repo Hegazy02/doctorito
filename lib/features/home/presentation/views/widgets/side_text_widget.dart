@@ -8,17 +8,12 @@ class SideTextWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Positioned.fill(
-      child: Align(
-        alignment: Alignment.bottomCenter,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 30),
-          child: Text(
-            "Manage and schedule all of your medical appointments easily with Docdoc to get a new experience.",
-            style: Styles.style12dGreyBold,
-            textAlign: TextAlign.center,
-          ),
-        ),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 30),
+      child: Text(
+        "Manage and schedule all of your medical appointments easily with Docdoc to get a new experience.",
+        style: Styles.style12dGreyBold,
+        textAlign: TextAlign.center,
       ),
     );
   }

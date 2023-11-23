@@ -1,5 +1,4 @@
 import 'package:doctorito/features/home/presentation/views/widgets/best_doctor_widget.dart';
-import 'package:doctorito/features/home/presentation/views/widgets/side_text_widget.dart';
 import 'package:flutter/material.dart';
 
 class DoctorImageWithText extends StatelessWidget {
@@ -11,32 +10,27 @@ class DoctorImageWithText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        ColorFiltered(
-          colorFilter: ColorFilter.mode(
-            Colors.white.withOpacity(0.8),
-            BlendMode.modulate,
-          ),
-          child: Image.asset(
-            "assets/images/Image.png",
-          ),
-        ),
         Container(
-          width: double.infinity,
-          decoration: BoxDecoration(
+          foregroundDecoration: BoxDecoration(
               gradient: LinearGradient(
-            colors: [
-              Colors.white.withOpacity(0),
-              Colors.white.withOpacity(0),
-              Colors.white.withOpacity(0),
-              Colors.white,
-              Colors.white,
-            ],
-            end: Alignment.bottomCenter,
-            begin: Alignment.topCenter,
-          )),
+                  colors: [
+                    Colors.white,
+                    Colors.white.withOpacity(0),
+                  ],
+                  end: Alignment.topCenter,
+                  begin: Alignment.bottomCenter,
+                  stops: const [0.24, 0.4])),
+          child: ColorFiltered(
+            colorFilter: ColorFilter.mode(
+              Colors.white.withOpacity(0.8),
+              BlendMode.modulate,
+            ),
+            child: Image.asset(
+              "assets/images/onboarding_doctor.png",
+            ),
+          ),
         ),
         const BestDoctorWidget(),
-        const SideTextWidget(),
       ],
     );
   }

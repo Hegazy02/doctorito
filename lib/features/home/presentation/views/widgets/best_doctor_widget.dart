@@ -8,14 +8,14 @@ class BestDoctorWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Positioned.fill(
-      bottom: 60,
+    return Positioned.fill(
+      bottom: 30,
       child: Align(
         alignment: Alignment.bottomCenter,
         child: Text(
           "Best Doctor \n Appointment App",
           textAlign: TextAlign.center,
-          style: Styles.style30PrimaryColorBold,
+          style: Styles.style32PrimaryColorBold.copyWith(height: 1.4),
         ),
       ),
     );

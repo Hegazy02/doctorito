@@ -1,6 +1,7 @@
 import 'package:doctorito/features/home/presentation/views/widgets/custom_button.dart';
 import 'package:doctorito/features/home/presentation/views/widgets/doctor_image_with_text.dart';
 import 'package:doctorito/features/home/presentation/views/widgets/logo_widget.dart';
+import 'package:doctorito/features/home/presentation/views/widgets/side_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -17,16 +18,12 @@ class OnBoardingViewBody extends StatelessWidget {
           SizedBox(
             height: 30.h,
           ),
-          const Expanded(
-            child: DoctorImageWithText(),
-          ),
+          const DoctorImageWithText(),
+          const SideTextWidget(),
           SizedBox(
-            height: 40.h,
+            height: 30.h,
           ),
           const CustomButton(),
-          SizedBox(
-            height: 40.h,
-          ),
         ],
       ),
     );
