@@ -3,8 +3,8 @@ import 'package:doctorito/features/home/presentation/views/widgets/doctor_image_
 import 'package:doctorito/features/home/presentation/views/widgets/logo_widget.dart';
 import 'package:flutter/material.dart';
 
-class HomeViewBody extends StatelessWidget {
-  const HomeViewBody({super.key});
+class OnBoardingViewBody extends StatelessWidget {
+  const OnBoardingViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {

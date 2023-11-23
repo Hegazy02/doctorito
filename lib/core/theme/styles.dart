@@ -1,8 +1,12 @@
+import 'package:doctorito/core/theme/colors.dart';
 import 'package:flutter/material.dart';
 
 class Styles {
-  static TextStyle style30 = TextStyle(
-      fontSize: 30, fontWeight: FontWeight.bold, color: Colors.blue[600]);
+  static const TextStyle style30 = TextStyle(
+    fontSize: 30,
+    fontWeight: FontWeight.bold,
+    color: MyColors.primaryColor,
+  );
   static TextStyle style12 = TextStyle(
       fontSize: 12,
       fontWeight: FontWeight.bold,
