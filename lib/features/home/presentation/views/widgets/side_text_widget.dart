@@ -15,7 +15,7 @@ class SideTextWidget extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 30),
           child: Text(
             "Manage and schedule all of your medical appointments easily with Docdoc to get a new experience.",
-            style: Styles.style12,
+            style: Styles.style12dGreyBold,
             textAlign: TextAlign.center,
           ),
         ),

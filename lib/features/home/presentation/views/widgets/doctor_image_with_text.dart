@@ -2,8 +2,8 @@ import 'package:doctorito/features/home/presentation/views/widgets/best_doctor_w
 import 'package:doctorito/features/home/presentation/views/widgets/side_text_widget.dart';
 import 'package:flutter/material.dart';
 
-class DoctorImageWidget extends StatelessWidget {
-  const DoctorImageWidget({
+class DoctorImageWithText extends StatelessWidget {
+  const DoctorImageWithText({
     super.key,
   });
 
