@@ -3,35 +3,46 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Styles {
-  static TextStyle style32PrimaryColorBold = TextStyle(
+  static TextStyle style32PrimaryColorw700 = TextStyle(
     fontSize: 32.sp,
     fontWeight: FontWeight.bold,
     color: MyColors.primaryColor,
   );
-  static TextStyle style24PrimaryColorBold = TextStyle(
+  static TextStyle style24PrimaryColorw700 = TextStyle(
     fontSize: 24.sp,
     fontWeight: FontWeight.bold,
     color: MyColors.primaryColor,
   );
-  static TextStyle style12PrimaryColorRegular = TextStyle(
+  static TextStyle style12PrimaryColorw400 = TextStyle(
     fontSize: 12.sp,
     color: MyColors.primaryColor,
   );
-  static TextStyle style12dGreyBold = TextStyle(
-      fontSize: 12.sp, fontWeight: FontWeight.bold, color: MyColors.grey);
-  static TextStyle style12GreyRegular = TextStyle(
+  static TextStyle style12PrimaryColorw600 = TextStyle(
+      fontSize: 12.sp,
+      color: MyColors.primaryColor,
+      fontWeight: FontWeight.w600);
+  static TextStyle style12dGreyw400 = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w400,
+    color: MyColors.grey,
+  );
+  static TextStyle style12Greyw400 = TextStyle(
     fontSize: 12.sp,
     color: MyColors.grey,
   );
-  static TextStyle style12Grey2Regular = TextStyle(
+  static TextStyle style12Grey2w400 = TextStyle(
     fontSize: 12.sp,
-    color: MyColors.grey,
+    color: MyColors.grey2,
   );
-  static TextStyle style15rGreyRegular = TextStyle(
+  static TextStyle style12Grey3w400 = TextStyle(
+    fontSize: 12.sp,
+    color: MyColors.grey3,
+  );
+  static TextStyle style15rGreyw400 = TextStyle(
     fontSize: 15.sp,
     color: MyColors.grey,
   );
-  static TextStyle style16WihteBold = TextStyle(
+  static TextStyle style16Wihtew700 = TextStyle(
     fontSize: 16.sp,
     fontWeight: FontWeight.bold,
     color: Colors.white,
