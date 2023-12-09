@@ -16,14 +16,24 @@ class OnBoardingViewBody extends StatelessWidget {
         children: [
           const LogoWidget(),
           SizedBox(
-            height: 30.h,
+            height: 25.h,
           ),
           const DoctorImageWithText(),
-          const SideTextWidget(),
-          SizedBox(
-            height: 30.h,
-          ),
-          const CustomButton(),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 32.w),
+            child: Column(
+              children: [
+                const SideTextWidget(),
+                SizedBox(
+                  height: 25.h,
+                ),
+                CustomButton(
+                  text: "Get Started",
+                  onPressed: () {},
+                ),
+              ],
+            ),
+          )
         ],
       ),
     );
