@@ -13,17 +13,23 @@ class Styles {
     fontWeight: FontWeight.bold,
     color: MyColors.primaryColor,
   );
-  static TextStyle style12dGreyBold = TextStyle(
-      fontSize: 12.sp,
-      fontWeight: FontWeight.bold,
-      color: Colors.grey.withOpacity(0.5));
-  static TextStyle style12rGreyRegular = TextStyle(
+  static TextStyle style12PrimaryColorRegular = TextStyle(
     fontSize: 12.sp,
-    color: Colors.grey.withOpacity(0.5),
+    color: MyColors.primaryColor,
   );
-  static TextStyle style14rGreyRegular = TextStyle(
-    fontSize: 14.sp,
-    color: Colors.grey.withOpacity(0.5),
+  static TextStyle style12dGreyBold = TextStyle(
+      fontSize: 12.sp, fontWeight: FontWeight.bold, color: MyColors.grey);
+  static TextStyle style12GreyRegular = TextStyle(
+    fontSize: 12.sp,
+    color: MyColors.grey,
+  );
+  static TextStyle style12Grey2Regular = TextStyle(
+    fontSize: 12.sp,
+    color: MyColors.grey,
+  );
+  static TextStyle style15rGreyRegular = TextStyle(
+    fontSize: 15.sp,
+    color: MyColors.grey,
   );
   static TextStyle style16WihteBold = TextStyle(
     fontSize: 16.sp,

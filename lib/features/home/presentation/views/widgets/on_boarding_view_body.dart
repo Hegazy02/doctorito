@@ -23,7 +23,10 @@ class OnBoardingViewBody extends StatelessWidget {
           SizedBox(
             height: 25.h,
           ),
-          const CustomButton(),
+          CustomButton(
+            text: "Get Started",
+            onPressed: () {},
+          ),
         ],
       ),
     );

@@ -3,13 +3,20 @@ import 'package:flutter/material.dart';
 
 class CutomTextField extends StatelessWidget {
   final String hintText;
-  const CutomTextField({super.key, required this.hintText});
+  final void Function(String)? onChanged;
+  final String? Function(String?)? validator;
+  const CutomTextField(
+      {super.key,
+      required this.hintText,
+      required this.onChanged,
+      this.validator});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8),
-      child: TextField(
+      child: TextFormField(
+        validator: validator,
         decoration: InputDecoration(
           hintText: hintText,
           hintStyle: const TextStyle(color: MyColors.lightGrey),
@@ -18,6 +25,7 @@ class CutomTextField extends StatelessWidget {
           errorBorder: customBorder(),
           focusedErrorBorder: customBorder(),
         ),
+        onChanged: onChanged,
       ),
     );
   }
