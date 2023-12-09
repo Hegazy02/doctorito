@@ -21,6 +21,8 @@ class Styles {
       fontSize: 12.sp,
       color: MyColors.primaryColor,
       fontWeight: FontWeight.w600);
+  static TextStyle style12darkBluew500 = TextStyle(
+      fontSize: 14.sp, color: MyColors.darkBlue, fontWeight: FontWeight.w500);
   static TextStyle style12dGreyw400 = TextStyle(
     fontSize: 12.sp,
     fontWeight: FontWeight.w400,
@@ -29,6 +31,11 @@ class Styles {
   static TextStyle style12Greyw400 = TextStyle(
     fontSize: 12.sp,
     color: MyColors.grey,
+  );
+  static TextStyle style12Grey4w500 = TextStyle(
+    fontSize: 14.sp,
+    color: MyColors.grey4,
+    fontWeight: FontWeight.w500,
   );
   static TextStyle style12Grey2w400 = TextStyle(
     fontSize: 12.sp,

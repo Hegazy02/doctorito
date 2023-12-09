@@ -1,4 +1,5 @@
 import 'package:doctorito/core/theme/colors.dart';
+import 'package:doctorito/core/theme/styles.dart';
 import 'package:flutter/material.dart';
 
 class CutomTextField extends StatelessWidget {
@@ -29,13 +30,14 @@ class CutomTextField extends StatelessWidget {
               ? null
               : IconButton(onPressed: onIconPressed, icon: Icon(iconData)),
           hintText: hintText,
-          hintStyle: const TextStyle(color: MyColors.grey4),
+          hintStyle: Styles.style12Grey4w500,
           enabledBorder: customBorder(MyColors.lightGrey),
           focusedBorder: customBorder(MyColors.primaryColor),
           errorBorder: customBorder(MyColors.red),
           focusedErrorBorder: customBorder(MyColors.red),
         ),
         onChanged: onChanged,
+        style: Styles.style12darkBluew500,
       ),
     );
   }
