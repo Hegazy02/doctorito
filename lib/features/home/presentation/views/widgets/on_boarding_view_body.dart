@@ -16,12 +16,12 @@ class OnBoardingViewBody extends StatelessWidget {
         children: [
           const LogoWidget(),
           SizedBox(
-            height: 30.h,
+            height: 25.h,
           ),
           const DoctorImageWithText(),
           const SideTextWidget(),
           SizedBox(
-            height: 30.h,
+            height: 25.h,
           ),
           const CustomButton(),
         ],

@@ -14,7 +14,7 @@ class CustomButton extends StatelessWidget {
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
             padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 100)),
-        child: const Text(
+        child: Text(
           "Get Started",
           style: Styles.style16WihteBold,
         ));

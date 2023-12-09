@@ -23,7 +23,7 @@ class DocDocApp extends StatelessWidget {
               backgroundColor: MyColors.primaryColor,
             ))),
         onGenerateRoute: AppRouter.generateRoute,
-        initialRoute: Routes.onBoardingView,
+        initialRoute: Routes.loginView,
       ),
     );
   }

@@ -1,4 +1,5 @@
 import 'package:doctorito/core/routing/routes.dart';
+import 'package:doctorito/features/auth/presentation/views/login_view.dart';
 import 'package:doctorito/features/home/presentation/views/on_boarding_view.dart';
 import 'package:flutter/material.dart';
 
@@ -8,7 +9,7 @@ class AppRouter {
       case Routes.onBoardingView:
         return MaterialPageRoute(builder: (_) => const OnBoardingView());
       case Routes.loginView:
-        return MaterialPageRoute(builder: (_) => const OnBoardingView());
+        return MaterialPageRoute(builder: (_) => const LoginView());
       case Routes.signUpView:
         return MaterialPageRoute(builder: (_) => const OnBoardingView());
 
