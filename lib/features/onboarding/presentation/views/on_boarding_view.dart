@@ -1,4 +1,4 @@
-import 'package:doctorito/features/home/presentation/views/widgets/on_boarding_view_body.dart';
+import 'package:doctorito/features/onboarding/presentation/views/widgets/on_boarding_view_body.dart';
 import 'package:flutter/material.dart';
 
 class OnBoardingView extends StatelessWidget {
