@@ -1,4 +1,4 @@
-import 'package:doctorito/features/home/presentation/views/widgets/best_doctor_widget.dart';
+import 'package:doctorito/features/onboarding/presentation/views/widgets/best_doctor_widget.dart';
 import 'package:flutter/material.dart';
 
 class DoctorImageWithText extends StatelessWidget {

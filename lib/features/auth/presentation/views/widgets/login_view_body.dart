@@ -1,6 +1,6 @@
 import 'package:doctorito/core/theme/styles.dart';
 import 'package:doctorito/features/auth/presentation/views/widgets/custom_textField.dart';
-import 'package:doctorito/features/home/presentation/views/widgets/custom_button.dart';
+import 'package:doctorito/features/onboarding/presentation/views/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
