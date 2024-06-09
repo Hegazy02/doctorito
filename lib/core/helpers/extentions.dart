@@ -18,3 +18,22 @@ extension Navigation on BuildContext {
 
   void pop() => Navigator.of(this).pop();
 }
+
+extension LoadingExtension on BuildContext {
+  void showLoading() {
+    showDialog(
+        context: this,
+        barrierDismissible: false,
+        builder: (_) => const Center(child: CircularProgressIndicator()));
+  }
+
+  void hideLoading() => Navigator.of(this).pop();
+
+  void showError(String? message) {
+    showDialog(
+        context: this,
+        builder: (_) => AlertDialog(
+              content: Text(message ?? "Something went wrong"),
+            ));
+  }
+}

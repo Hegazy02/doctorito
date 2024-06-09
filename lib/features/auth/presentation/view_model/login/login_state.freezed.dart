@@ -21,7 +21,7 @@ mixin _$LoginState {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(LoginResponse loginResponse) success,
-    required TResult Function(ErrorHandler error) error,
+    required TResult Function(String error) error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -29,7 +29,7 @@ mixin _$LoginState {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(LoginResponse loginResponse)? success,
-    TResult? Function(ErrorHandler error)? error,
+    TResult? Function(String error)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -37,7 +37,7 @@ mixin _$LoginState {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(LoginResponse loginResponse)? success,
-    TResult Function(ErrorHandler error)? error,
+    TResult Function(String error)? error,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -127,7 +127,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(LoginResponse loginResponse) success,
-    required TResult Function(ErrorHandler error) error,
+    required TResult Function(String error) error,
   }) {
     return initial();
   }
@@ -138,7 +138,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(LoginResponse loginResponse)? success,
-    TResult? Function(ErrorHandler error)? error,
+    TResult? Function(String error)? error,
   }) {
     return initial?.call();
   }
@@ -149,7 +149,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(LoginResponse loginResponse)? success,
-    TResult Function(ErrorHandler error)? error,
+    TResult Function(String error)? error,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -241,7 +241,7 @@ class _$LoadingImpl implements Loading {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(LoginResponse loginResponse) success,
-    required TResult Function(ErrorHandler error) error,
+    required TResult Function(String error) error,
   }) {
     return loading();
   }
@@ -252,7 +252,7 @@ class _$LoadingImpl implements Loading {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(LoginResponse loginResponse)? success,
-    TResult? Function(ErrorHandler error)? error,
+    TResult? Function(String error)? error,
   }) {
     return loading?.call();
   }
@@ -263,7 +263,7 @@ class _$LoadingImpl implements Loading {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(LoginResponse loginResponse)? success,
-    TResult Function(ErrorHandler error)? error,
+    TResult Function(String error)? error,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -382,7 +382,7 @@ class _$SuccessImpl implements Success {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(LoginResponse loginResponse) success,
-    required TResult Function(ErrorHandler error) error,
+    required TResult Function(String error) error,
   }) {
     return success(loginResponse);
   }
@@ -393,7 +393,7 @@ class _$SuccessImpl implements Success {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(LoginResponse loginResponse)? success,
-    TResult? Function(ErrorHandler error)? error,
+    TResult? Function(String error)? error,
   }) {
     return success?.call(loginResponse);
   }
@@ -404,7 +404,7 @@ class _$SuccessImpl implements Success {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(LoginResponse loginResponse)? success,
-    TResult Function(ErrorHandler error)? error,
+    TResult Function(String error)? error,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -467,7 +467,7 @@ abstract class _$$ErrorImplCopyWith<$Res> {
           _$ErrorImpl value, $Res Function(_$ErrorImpl) then) =
       __$$ErrorImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({ErrorHandler error});
+  $Res call({String error});
 }
 
 /// @nodoc
@@ -487,7 +487,7 @@ class __$$ErrorImplCopyWithImpl<$Res>
       error: null == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
-              as ErrorHandler,
+              as String,
     ));
   }
 }
@@ -498,7 +498,7 @@ class _$ErrorImpl implements Error {
   const _$ErrorImpl({required this.error});
 
   @override
-  final ErrorHandler error;
+  final String error;
 
   @override
   String toString() {
@@ -528,7 +528,7 @@ class _$ErrorImpl implements Error {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(LoginResponse loginResponse) success,
-    required TResult Function(ErrorHandler error) error,
+    required TResult Function(String error) error,
   }) {
     return error(this.error);
   }
@@ -539,7 +539,7 @@ class _$ErrorImpl implements Error {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(LoginResponse loginResponse)? success,
-    TResult? Function(ErrorHandler error)? error,
+    TResult? Function(String error)? error,
   }) {
     return error?.call(this.error);
   }
@@ -550,7 +550,7 @@ class _$ErrorImpl implements Error {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(LoginResponse loginResponse)? success,
-    TResult Function(ErrorHandler error)? error,
+    TResult Function(String error)? error,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -598,9 +598,9 @@ class _$ErrorImpl implements Error {
 }
 
 abstract class Error implements LoginState {
-  const factory Error({required final ErrorHandler error}) = _$ErrorImpl;
+  const factory Error({required final String error}) = _$ErrorImpl;
 
-  ErrorHandler get error;
+  String get error;
   @JsonKey(ignore: true)
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;

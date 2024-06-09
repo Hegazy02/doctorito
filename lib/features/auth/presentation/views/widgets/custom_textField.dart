@@ -9,12 +9,14 @@ class CutomTextField extends StatelessWidget {
   final bool? isHiddeng;
   final IconData? iconData;
   final void Function()? onIconPressed;
+  final TextEditingController? controller;
   const CutomTextField(
       {super.key,
       required this.hintText,
-      required this.onChanged,
+      this.onChanged,
       this.validator,
       this.isHiddeng,
+      this.controller,
       this.iconData,
       this.onIconPressed});
 
@@ -24,6 +26,7 @@ class CutomTextField extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 8),
       child: TextFormField(
         validator: validator,
+        controller: controller,
         obscureText: isHiddeng ?? false,
         decoration: InputDecoration(
           suffixIcon: iconData == null
