@@ -1,7 +1,7 @@
 import 'package:doctorito/core/routing/app_router.dart';
 import 'package:doctorito/core/routing/routes.dart';
 import 'package:doctorito/core/theme/colors.dart';
-import 'package:doctorito/features/onboarding/presentation/views/on_boarding_view.dart';
+import 'package:doctorito/features/auth/onboarding/presentation/views/on_boarding_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -36,7 +36,7 @@ class DocDocApp extends StatelessWidget {
               backgroundColor: MyColors.primaryColor,
             ))),
         onGenerateRoute: AppRouter.generateRoute,
-        initialRoute: Routes.loginView,
+        initialRoute: Routes.onBoardingView,
       ),
     );
   }

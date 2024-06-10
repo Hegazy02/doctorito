@@ -1,7 +1,9 @@
-import 'package:doctorito/features/onboarding/presentation/views/widgets/custom_button.dart';
-import 'package:doctorito/features/onboarding/presentation/views/widgets/doctor_image_with_text.dart';
-import 'package:doctorito/features/onboarding/presentation/views/widgets/logo_widget.dart';
-import 'package:doctorito/features/onboarding/presentation/views/widgets/side_text_widget.dart';
+import 'package:doctorito/core/helpers/extentions.dart';
+import 'package:doctorito/core/routing/routes.dart';
+import 'package:doctorito/core/widgets/custom_button.dart';
+import 'package:doctorito/features/auth/onboarding/presentation/views/widgets/doctor_image_with_text.dart';
+import 'package:doctorito/features/auth/onboarding/presentation/views/widgets/logo_widget.dart';
+import 'package:doctorito/features/auth/onboarding/presentation/views/widgets/side_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -29,7 +31,11 @@ class OnBoardingViewBody extends StatelessWidget {
                 ),
                 CustomButton(
                   text: "Get Started",
-                  onPressed: () {},
+                  onPressed: () {
+                    context.pushReplacementNamed(
+                      Routes.loginView,
+                    );
+                  },
                 ),
               ],
             ),

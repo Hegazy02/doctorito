@@ -1,7 +1,9 @@
 import 'package:dio/dio.dart';
 import 'package:doctorito/core/network/api_constants.dart';
-import 'package:doctorito/features/auth/data/models/login_request_body.dart';
-import 'package:doctorito/features/auth/data/models/login_response.dart';
+import 'package:doctorito/features/auth/login/data/models/login_request_body.dart';
+import 'package:doctorito/features/auth/login/data/models/login_response.dart';
+import 'package:doctorito/features/auth/sign_up/data/models/sign_up_request_body.dart';
+import 'package:doctorito/features/auth/sign_up/data/models/sign_up_response.dart';
 import 'package:retrofit/http.dart';
 part 'api_service.g.dart';
 
@@ -14,8 +16,8 @@ abstract class ApiService {
     @Body() LoginRequestBody loginRequestBody,
   );
 
-  // @POST(ApiConstants.signup)
-  // Future<SignupResponse> signup(
-  //   @Body() SignupRequestBody signupRequestBody,
-  // );
+  @POST(ApiConstants.signUp)
+  Future<SignUpResponse> signUp(
+    @Body() SignUpRequestBody signUpRequestBody,
+  );
 }

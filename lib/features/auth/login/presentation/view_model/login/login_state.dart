@@ -1,4 +1,4 @@
-import 'package:doctorito/features/auth/data/models/login_response.dart';
+import 'package:doctorito/features/auth/login/data/models/login_response.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 part 'login_state.freezed.dart';
 

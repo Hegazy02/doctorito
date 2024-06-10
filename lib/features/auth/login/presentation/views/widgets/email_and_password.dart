@@ -1,7 +1,7 @@
 import 'package:doctorito/core/helpers/app_regex.dart';
-import 'package:doctorito/features/auth/presentation/view_model/login/login_cubit.dart';
-import 'package:doctorito/features/auth/presentation/views/widgets/custom_textField.dart';
-import 'package:doctorito/features/auth/presentation/views/widgets/passowrd_validation.dart';
+import 'package:doctorito/features/auth/login/presentation/view_model/login/login_cubit.dart';
+import 'package:doctorito/core/widgets/custom_textField.dart';
+import 'package:doctorito/features/auth/login/presentation/views/widgets/passowrd_validation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -86,11 +86,5 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
         ],
       ),
     );
-  }
-
-  @override
-  void dispose() {
-    context.read<LoginCubit>().passwordController.dispose();
-    super.dispose();
   }
 }

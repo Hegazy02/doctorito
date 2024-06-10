@@ -1,7 +1,7 @@
 import 'package:doctorito/core/helpers/extentions.dart';
 import 'package:doctorito/core/routing/routes.dart';
-import 'package:doctorito/features/auth/presentation/view_model/login/login_cubit.dart';
-import 'package:doctorito/features/auth/presentation/view_model/login/login_state.dart';
+import 'package:doctorito/features/auth/login/presentation/view_model/login/login_cubit.dart';
+import 'package:doctorito/features/auth/login/presentation/view_model/login/login_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -20,7 +20,10 @@ class LoginBlocListener extends StatelessWidget {
           },
           success: (loginResponse) {
             context.hideLoading();
-            context.pushReplacementNamed(Routes.homeView);
+            context.pushNamedAndRemoveUntil(
+              Routes.homeView,
+              predicate: (route) => false,
+            );
           },
         );
       },

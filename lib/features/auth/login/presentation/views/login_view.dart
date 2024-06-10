@@ -1,11 +1,16 @@
+import 'dart:developer';
+
+import 'package:doctorito/core/helpers/extentions.dart';
+import 'package:doctorito/core/routing/routes.dart';
 import 'package:doctorito/core/theme/styles.dart';
-import 'package:doctorito/features/auth/data/models/login_request_body.dart';
-import 'package:doctorito/features/auth/presentation/view_model/login/login_cubit.dart';
-import 'package:doctorito/features/auth/presentation/views/widgets/email_and_password.dart';
-import 'package:doctorito/features/auth/presentation/views/widgets/login_bloc_listener.dart';
-import 'package:doctorito/features/auth/presentation/views/widgets/remember_me.dart';
-import 'package:doctorito/features/auth/presentation/views/widgets/terms_and_conditions.dart';
-import 'package:doctorito/features/onboarding/presentation/views/widgets/custom_button.dart';
+import 'package:doctorito/features/auth/login/data/models/login_request_body.dart';
+import 'package:doctorito/features/auth/login/presentation/view_model/login/login_cubit.dart';
+import 'package:doctorito/features/auth/login/presentation/views/widgets/email_and_password.dart';
+import 'package:doctorito/features/auth/login/presentation/views/widgets/login_bloc_listener.dart';
+import 'package:doctorito/features/auth/login/presentation/views/widgets/remember_me.dart';
+import 'package:doctorito/features/auth/login/presentation/views/widgets/terms_and_conditions.dart';
+import 'package:doctorito/core/widgets/custom_button.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -64,7 +69,12 @@ class LoginView extends StatelessWidget {
                 TextSpan(children: [
                   const TextSpan(text: "Don't have an account yet? "),
                   TextSpan(
-                      text: "Sign Up", style: Styles.style12PrimaryColorw600),
+                      recognizer: TapGestureRecognizer()
+                        ..onTap = () => context.pushReplacementNamed(
+                              Routes.signUpView,
+                            ),
+                      text: "Sign Up",
+                      style: Styles.style12PrimaryColorw600),
                 ]),
               ),
               const Spacer(),

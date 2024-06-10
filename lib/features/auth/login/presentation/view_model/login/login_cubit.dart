@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
-import 'package:doctorito/features/auth/data/models/login_request_body.dart';
-import 'package:doctorito/features/auth/data/repos/login_repo.dart';
-import 'package:doctorito/features/auth/presentation/view_model/login/login_state.dart';
+import 'package:doctorito/features/auth/login/data/models/login_request_body.dart';
+import 'package:doctorito/features/auth/login/data/repos/login_repo.dart';
+import 'package:doctorito/features/auth/login/presentation/view_model/login/login_state.dart';
 import 'package:flutter/material.dart';
 
 class LoginCubit extends Cubit<LoginState> {
