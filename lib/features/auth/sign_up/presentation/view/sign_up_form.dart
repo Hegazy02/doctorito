@@ -63,7 +63,7 @@ class _SignUpFormState extends State<SignUpForm> {
               if (val!.isNotEmpty && AppRegex.isPhoneNumberValid(val)) {
                 return null;
               } else {
-                return "Email is not vaild";
+                return "Phone is not vaild";
               }
             },
           ),
