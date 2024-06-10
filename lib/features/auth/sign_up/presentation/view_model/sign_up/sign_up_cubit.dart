@@ -17,23 +17,25 @@ class SignUpCubit extends Cubit<SignUpState> {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   Future<void> signUp() async {
-    emit(const SignUpState.loading());
-    final result = await _signUpRepo.signUp(
-        signUpRequestBody: SignUpRequestBody(
-      name: nameController.text,
-      email: emailController.text,
-      password: passwordController.text,
-      confirmedPassword: confirmPasswordController.text,
-      phone: phoneController.text,
-      gender: "0",
-    ));
-    result.when(
-      success: (signUpResponse) {
-        emit(SignUpState.success(signUpResponse));
-      },
-      failure: (error) {
-        emit(SignUpState.error(error: error.apiErrorModel.message ?? ''));
-      },
-    );
+    if (formKey.currentState!.validate()) {
+      emit(const SignUpState.loading());
+      final result = await _signUpRepo.signUp(
+          signUpRequestBody: SignUpRequestBody(
+        name: nameController.text,
+        email: emailController.text,
+        password: passwordController.text,
+        confirmedPassword: confirmPasswordController.text,
+        phone: phoneController.text,
+        gender: "0",
+      ));
+      result.when(
+        success: (signUpResponse) {
+          emit(SignUpState.success(signUpResponse));
+        },
+        failure: (error) {
+          emit(SignUpState.error(error: error.apiErrorModel.message ?? ''));
+        },
+      );
+    }
   }
 }
