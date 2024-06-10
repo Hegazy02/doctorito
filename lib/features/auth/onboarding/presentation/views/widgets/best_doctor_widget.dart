@@ -15,7 +15,7 @@ class BestDoctorWidget extends StatelessWidget {
         child: Text(
           "Best Doctor \n Appointment App",
           textAlign: TextAlign.center,
-          style: Styles.style32PrimaryColorBold.copyWith(height: 1.4),
+          style: Styles.style32PrimaryColorw700.copyWith(height: 1.4),
         ),
       ),
     );
