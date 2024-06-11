@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "703668177161",
+    "project_id": "docdoc-135af",
+    "storage_bucket": "docdoc-135af.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:703668177161:android:e2256e3870ed473817ebd8",
+        "android_client_info": {
+          "package_name": "com.example.doctorito"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCa1LagrWQ_8PtS8xvXbBc8PJHJrrnwCE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:703668177161:android:6637831094fee97317ebd8",
+        "android_client_info": {
+          "package_name": "com.example.doctorito.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCa1LagrWQ_8PtS8xvXbBc8PJHJrrnwCE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,5 +1,8 @@
 plugins {
     id "com.android.application"
+    // START: FlutterFire Configuration
+    id 'com.google.gms.google-services'
+    // END: FlutterFire Configuration
     id "kotlin-android"
     id "dev.flutter.flutter-gradle-plugin"
 }
@@ -51,6 +54,19 @@ android {
         versionName flutterVersionName
     }
 
+    flavorDimensions "default"
+    productFlavors {
+        prod {
+        dimension "default"
+        resValue "string", "app_name", "DocDoc prod"
+        }
+        dev {
+        dimension "default"
+        resValue "string", "app_name", "DocDoc dev"
+        applicationIdSuffix ".dev"
+        }
+    }
+
     buildTypes {
         release {
             // TODO: Add your own signing config for the release build.
@@ -58,6 +74,15 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+    configurations.all {
+    resolutionStrategy {
+        eachDependency {
+            if ((requested.group == "org.jetbrains.kotlin") && (requested.name.startsWith("kotlin-stdlib"))) {
+                useVersion("1.8.0")
+            }
+        }
+    }
+}
 }
 
 flutter {
